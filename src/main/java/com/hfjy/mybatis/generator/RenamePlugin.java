@@ -58,6 +58,7 @@ public class RenamePlugin extends PluginAdapter {
         }
         introspectedTable.setMyBatis3JavaMapperType(oldType);
         //更改默认生成的Mapper.java为mbg目录下MBGMapper.java
+        oldType = introspectedTable.getMyBatis3XmlMapperFileName();
         String mapperName = introspectedTable.getMyBatis3XmlMapperFileName();
         if (replaceFlag) {
             Matcher matcher = pattern.matcher(oldType);
